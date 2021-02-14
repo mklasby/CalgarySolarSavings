@@ -16,24 +16,25 @@ app = Flask(__name__, static_url_path='/static', template_folder='static', )
 def home():
     return render_template("index.html")
 
+
 @app.route("/availability.html")
 def availability():
-    fig1=get_fig_cpi()
-    fig2=get_fig_carbon()
+    fig1 = get_fig_cpi()
+    fig2 = get_fig_carbon()
     return render_template("availability.html", f1=fig1, f2=fig2)
+
 
 @app.route("/ownership.html")
 def owner():
     return render_template("ownership.html")
 
+
 @app.route("/stats.html")
 def page3():
-    fig1,fig2,fig3,fig4=get_figs()
-    return render_template("stats.html",f1=fig1,f2=fig2,f3=fig3,f4=fig4)
-
-
+    fig1, fig2, fig3, fig4 = get_figs()
+    return render_template("stats.html", f1=fig1, f2=fig2, f3=fig3, f4=fig4)
 
 
 # run the application
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0')
