@@ -1,11 +1,9 @@
-import json
 import dash
 import calendar
 import pandas as pd
 import dash_core_components as dcc
 import dash_html_components as html
 import plotly.express as px
-from dash.dependencies import Output, Input
 
 
 filename = "../data/Corporate_Energy_Consumption.csv"
