@@ -7,7 +7,6 @@ import dash_html_components as html
 import plotly.express as px
 from dash.dependencies import Output, Input
 
-app = dash.Dash(__name__)
 
 filename = "../data/Corporate_Energy_Consumption.csv"
 df = pd.read_csv(filename)
