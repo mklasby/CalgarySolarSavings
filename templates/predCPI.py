@@ -14,7 +14,7 @@ import dash_html_components as html
 
 
 
-def get_figs():
+def get_fig_cpi():
     filename = "../data/Energy_Consumer_Prices_Index.csv"
     missing_values = ["n/a", "na", "--", "NaN"]
     energy_prices = pd.read_csv(filename, na_values = missing_values)

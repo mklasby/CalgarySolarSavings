@@ -12,7 +12,7 @@ import dash
 import dash_core_components as dcc
 import dash_html_components as html
 
-def get_figs():
+def get_fig_carbon():
   filename = "../data/Carbon_Tax_Per_Jurisdiction.csv"
 
   missing_values = ["n/a", "na", "--", "NaN"]
