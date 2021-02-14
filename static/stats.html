@@ -86,7 +86,10 @@
                 <h3 class="mbr-section-title mbr-fonts-style align-center mb-4 display-2">
                     <strong>{{ ph1 }}</strong></h3>
                 <h4 class="mbr-section-subtitle align-center mbr-fonts-style mb-4 display-5">{{ ph2 }}</h4>
-
+                <div class="chart" id="f1"> {{f1 | safe}}</div>
+                <div class="chart" id="f2"> {{f2 | safe}}</div>
+                <div class="chart" id="f3"> {{f3 | safe}}</div>
+                <div class="chart" id="f4"> {{f4 | safe}}</div>
             </div>
         </div>
     </div>
@@ -124,7 +127,8 @@
 <script src="static/assets/dropdown/js/navbar-dropdown.js"></script>
 <script src="static/assets/touchswipe/jquery.touch-swipe.min.js"></script>
 <script src="static/assets/theme/js/script.js"></script>
-
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
 
 <input name="animation" type="hidden">
 </body>

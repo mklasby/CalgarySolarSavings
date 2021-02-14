@@ -3,6 +3,8 @@ from flask import *
 from flask import render_template
 
 # creates a Flask application, named app
+from templates.stats import get_figs
+
 app = Flask(__name__, static_url_path='/static', template_folder='static', )
 
 
@@ -22,7 +24,8 @@ def owner():
 
 @app.route("/stats.html")
 def page3():
-    return render_template("stats.html")
+    fig1,fig2,fig3,fig4=get_figs()
+    return render_template("stats.html",f1=fig1,f2=fig2,f3=fig3,f4=fig4)
 
 
 
