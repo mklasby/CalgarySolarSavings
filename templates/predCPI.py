@@ -15,7 +15,7 @@ import dash_html_components as html
 
 
 def get_fig_cpi():
-    filename = "../data/Energy_Consumer_Prices_Index.csv"
+    filename = "data/Energy_Consumer_Prices_Index.csv"
     missing_values = ["n/a", "na", "--", "NaN"]
     energy_prices = pd.read_csv(filename, na_values = missing_values)
     energy_prices['Year'] =  pd.to_datetime(energy_prices.Year, format='%Y')
@@ -31,18 +31,18 @@ def get_fig_cpi():
     pdq = list(itertools.product(p, d, q))
     seasonal_pdq = [(x[0], x[1], x[2], 12) for x in list(itertools.product(p, d, q))]
 
-    for param in pdq:
-        for param_seasonal in seasonal_pdq:
-            try:
-                mod = sm.tsa.statespace.SARIMAX(y_energy,
-                                                order=param,
-                                                seasonal_order=param_seasonal,
-                                                enforce_stationarity=False,
-                                                enforce_invertibility=False)
-                results = mod.fit()
-                # print('ARIMA{}x{}12 - AIC:{}'.format(param, param_seasonal, results.aic))
-            except:
-                continue
+    # for param in pdq:
+    #     for param_seasonal in seasonal_pdq:
+    #         try:
+    #             mod = sm.tsa.statespace.SARIMAX(y_energy,
+    #                                             order=param,
+    #                                             seasonal_order=param_seasonal,
+    #                                             enforce_stationarity=False,
+    #                                             enforce_invertibility=False)
+    #             results = mod.fit()
+    #             # print('ARIMA{}x{}12 - AIC:{}'.format(param, param_seasonal, results.aic))
+    #         except:
+    #             continue
 
     mod = sm.tsa.statespace.SARIMAX(y_energy,
                                     order=(1, 1, 1),

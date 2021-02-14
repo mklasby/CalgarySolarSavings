@@ -3,6 +3,8 @@ from flask import *
 from flask import render_template
 
 # creates a Flask application, named app
+from templates.predCPI import get_fig_cpi
+from templates.predCarbonTax import get_fig_carbon
 from templates.stats import get_figs
 
 app = Flask(__name__, static_url_path='/static', template_folder='static', )
@@ -16,7 +18,9 @@ def home():
 
 @app.route("/availability.html")
 def availability():
-    return render_template("availability.html")
+    fig1=get_fig_cpi()
+    fig2=get_fig_carbon()
+    return render_template("availability.html", f1=fig1, f2=fig2)
 
 @app.route("/ownership.html")
 def owner():
