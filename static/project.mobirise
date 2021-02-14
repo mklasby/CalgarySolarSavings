@@ -1,7 +1,7 @@
 {
   "settings": {
-    "name": "Site-02-13_1619",
-    "currentPage": "page3.html",
+    "name": "Calgary Green Initiative",
+    "currentPage": "index.html",
     "theme": {
       "name": "mobirise5",
       "title": "Mobirise 5",
@@ -41,7 +41,14 @@
     ],
     "uniqCompNum": 18,
     "versionPublish": "5.1.4",
-    "imageResize": true
+    "imageResize": true,
+    "favicon": "@PROJECT_PATH@/assets/images/63134987-128x128-1.png",
+    "robotsSwitcher": false,
+    "sitemapSwitcher": false,
+    "sitemapSwitcherAuto": false,
+    "siteUrl": false,
+    "cookiesAlert": false,
+    "gdpr": false
   },
   "pages": {
     "index.html": {
