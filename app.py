@@ -12,17 +12,17 @@ app = Flask(__name__, static_url_path='/static', template_folder='static', )
 def home():
     return render_template("index.html")
 
-@app.route("/avalibility.html")
+@app.route("/availability.html")
 def availability():
-    return render_template("avalibility.html")
+    return render_template("availability.html")
 
 @app.route("/ownership.html")
 def owner():
     return render_template("ownership.html")
 
-@app.route("/page3.html")
+@app.route("/stats.html")
 def page3():
-    return render_template("page3.html")
+    return render_template("stats.html")
 
 
 
