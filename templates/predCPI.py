@@ -72,7 +72,7 @@ def get_fig_cpi():
 
     # Plotly version
 
-    fig = px.line(x=y_energy.index, y=y_energy.values, title="Energy Consumer Price Index", labels=dict(x="Year", y="Consumer Price Index for Energy", color="Place"))
+    fig = px.line(x=y_energy.index, y=y_energy.values, title="Forecasted Energy Consumer Price Index", labels=dict(x="Year", y="Consumer Price Index for Energy $", color="Place"))
     fig.add_scatter(x=pred_ci.index, y=pred_ci['lower CPI'])
     fig.update_layout(showlegend=False)
     # fig.show()

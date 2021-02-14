@@ -104,7 +104,7 @@ def get_fig_carbon():
 
   ### Plotly version
   # Prediction of Energy Prices / Energy Consumer Price Index
-  fig = px.line(x=y.index, y=y.values, title="Carbon Tax Prediction in Alberta", labels=dict(x="Year", y="Tax $", color="Place"))
+  fig = px.line(x=y.index, y=y.values, title="Forecasted Carbon Tax in Alberta", labels=dict(x="Year", y="Tax $", color="Place"))
   fig.add_scatter(x=pred_ci.index, y=pred_ci['lower carbon_price'])
   fig.update_layout(showlegend=False)
   # fig.show()
