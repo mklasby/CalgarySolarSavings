@@ -3,7 +3,7 @@ from flask import *
 from flask import render_template
 
 # creates a Flask application, named app
-app = Flask(__name__, template_folder='static')
+app = Flask(__name__, static_url_path='/static', template_folder='static', )
 
 
 # a route where we will display a welcome message via an HTML template
