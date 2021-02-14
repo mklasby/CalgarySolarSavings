@@ -37,7 +37,12 @@ fig4 = px.line(monthly_energy, x='Month', y='Total Consumption', color='Year',
              title="Business Units' Monthly Energy Utilization in Calgary")
 
 app = dash.Dash(prevent_initial_callbacks=True)
-app.layout = html.Div([dcc.Location(id="url"), html.Div([dcc.Graph(id="graph1", figure=fig, style={'width':'80vw'})]), html.Div([dcc.Graph(id="graph2", figure=fig2, style={'width':'80vw', 'height':'80vh'})]), html.Div([dcc.Graph(id="graph3", figure=fig3, style={'width':'80vw', 'height':'80vh'})]), html.Div([dcc.Graph(id="graph4", figure=fig4, style={'width':'80vw', 'height':'80vh'})])])
+app.layout = html.Div([
+    html.Div([dcc.Graph(id="graph1", figure=fig, style={'width':'80vw'})]), 
+    html.Div([dcc.Graph(id="graph2", figure=fig2, style={'width':'80vw', 'height':'80vh'})]), 
+    html.Div([dcc.Graph(id="graph3", figure=fig3, style={'width':'80vw', 'height':'80vh'})]), 
+    html.Div([dcc.Graph(id="graph4", figure=fig4, style={'width':'80vw', 'height':'80vh'})])
+    ])
 
 
 
