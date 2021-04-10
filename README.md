@@ -1,5 +1,7 @@
 # CalgarySolarSavings
-For Hackathon 2021<br>
+Flask web application to encourage adoption of solar power generation.<br> 
+
+For Calgary Hackathon 2021<br>
 To run the server, run `python app.py` from the root folder of the github repo. 
 
 ##### Previews
